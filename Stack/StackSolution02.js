@@ -3,8 +3,8 @@ function solution(s){
 
   for (i = 0; i < s.length; i++) {
     if (s[i] === ')') {
-      const popped = stack.pop();
-      if (!popped) return false;
+      if (stack.length === 0) return false;
+      stack.pop();
     } else {
       stack.push(s[i]);
     }
