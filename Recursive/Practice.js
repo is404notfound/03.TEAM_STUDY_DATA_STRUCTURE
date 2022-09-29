@@ -29,3 +29,14 @@ function printOddNumber(index = 1, target = MAX, res = []) {
 }
 
 // printOddNumber(1, MAX, []);
+
+/* 1부터 n까지의 합 */
+function getTotal(index = 1, target = MAX, total = 0) {
+  if (index > target) {
+    console.log('total:: ', total);
+    return
+  }
+  getTotal(index + 1, target, total + index);
+}
+
+// getTotal();
