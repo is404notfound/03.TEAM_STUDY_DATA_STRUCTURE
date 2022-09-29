@@ -17,3 +17,15 @@ function printReversed(index = 1, target) {
 }
 
 // printReversed(1, MAX);
+
+/*두 수 사이의 홀수 출력*/
+function printOddNumber(index = 1, target = MAX, res = []) {
+  if (index > target) {
+    console.log('result: ', res);
+    return
+  }
+  (index % 2 !== 0) && res.push(index);
+  printOddNumber(index + 1, MAX, res);
+}
+
+// printOddNumber(1, MAX, []);
