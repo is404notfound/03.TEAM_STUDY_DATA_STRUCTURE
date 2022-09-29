@@ -40,3 +40,14 @@ function getTotal(index = 1, target = MAX, total = 0) {
 }
 
 // getTotal();
+
+/* 팩토리얼 계산 */
+function getFactorial(index = 1, target = MAX, result = 1) {
+  if (index > target) {
+    console.log('result:: ', result);
+    return
+  }
+  getFactorial(index + 1, target, result * index);
+}
+
+// getFactorial();
