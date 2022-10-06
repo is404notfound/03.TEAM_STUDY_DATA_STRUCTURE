@@ -5,7 +5,7 @@ let isArrived = false; // 방문자 체크용
 
 function dfs(horse, targetPositon, count, currentPositon) {
   if (isArrived) return;
-  if (targetPositon < currentPositon) {
+  if ( 0 > currentPositon || currentPositon > targetPositon) {
     console.log(`${horse}번 말은 도착하지 못했습니다.`);
     return;
   }
